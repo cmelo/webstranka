@@ -1,101 +1,111 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Todos</title>
+  <link rel="stylesheet" href="bulma.min.css">
   <link rel="stylesheet" href="home.css">
 </head>
-<body class="m-0 flex min-h-full flex-col bg-paper font-sans leading-normal text-ink">
-  <header class="bg-header text-paper">
-    <div class="mx-auto flex min-h-[4.25rem] w-full max-w-5xl items-center justify-between gap-4 px-6">
-      <p class="m-0 font-bold tracking-[0.14em] uppercase">Todos</p>
-      <a class="open-app rounded-full border border-blue-600 bg-blue-600 px-[0.85rem] py-[0.4rem] whitespace-nowrap text-white no-underline hover:border-blue-700 hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-blue-600" href="#preview">Open the app</a>
+<body>
+  <header class="has-background-dark">
+    <div class="container">
+      <div class="level is-mobile mb-0 px-2 py-3">
+        <div class="level-left">
+          <p class="level-item has-text-white has-text-weight-bold is-size-5 mb-0">Todos</p>
+        </div>
+        <div class="level-right">
+          <div class="level-item">
+            <a class="button is-link open-app" href="#preview">Open the app</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="flex-1">
-    <section>
-      <div class="mx-auto w-full max-w-5xl px-6">
-        <p class="mt-11 mb-8 text-2xl leading-[1.35]">A small list you can add to, check off, and delete.</p>
-      </div>
-    </section>
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="title is-3">A small list you can add to, check off, and delete.</p>
 
-    <section id="preview" class="scroll-mt-6" aria-labelledby="preview-title">
-      <div class="mx-auto w-full max-w-5xl px-6">
-        <div class="rounded-[14px] border border-line bg-card px-5 pt-[1.1rem] pb-[0.35rem]">
-          <h2 id="preview-title" class="mb-3 text-xs font-bold tracking-[0.14em] text-muted uppercase">Preview</h2>
-          <ul class="m-0 list-none p-0">
-            <li class="flex items-center gap-3 border-t border-line py-[0.8rem]">
-              <span class="grid size-[1.05rem] shrink-0 place-items-center rounded border-2 border-done bg-done after:block after:h-2 after:w-[0.28rem] after:-translate-y-px after:rotate-45 after:border-r-2 after:border-b-2 after:border-card after:content-['']" aria-hidden="true"></span>
-              <span class="text-muted line-through">Buy milk</span>
-            </li>
-            <li class="flex items-center gap-3 border-t border-line py-[0.8rem]">
-              <span class="grid size-[1.05rem] shrink-0 place-items-center rounded border-2 border-ink" aria-hidden="true"></span>
-              <span>Write the homepage</span>
-            </li>
-            <li class="flex items-center gap-3 border-t border-line py-[0.8rem]">
-              <span class="grid size-[1.05rem] shrink-0 place-items-center rounded border-2 border-ink" aria-hidden="true"></span>
-              <span>Walk the dog</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        <article id="preview" class="card" aria-labelledby="preview-title">
+          <header class="card-header">
+            <p id="preview-title" class="card-header-title">Preview</p>
+          </header>
+          <div class="card-content">
+            <label class="checkbox is-block mb-3">
+              <input type="checkbox" checked disabled>
+              <s class="has-text-grey">Buy milk</s>
+            </label>
+            <label class="checkbox is-block mb-3">
+              <input type="checkbox" disabled>
+              Write the homepage
+            </label>
+            <label class="checkbox is-block mb-0">
+              <input type="checkbox" disabled>
+              Walk the dog
+            </label>
+          </div>
+        </article>
 
-    <section class="mt-10" aria-labelledby="features-title">
-      <div class="mx-auto w-full max-w-5xl px-6">
-        <h2 id="features-title" class="mb-3 text-xs font-bold tracking-[0.14em] text-muted uppercase">Features</h2>
-        <ul class="m-0 list-disc pl-[1.2rem]">
-          <li class="py-[0.2rem]">Add a task</li>
-          <li class="py-[0.2rem]">Mark it done</li>
-          <li class="py-[0.2rem]">Delete it</li>
-          <li class="py-[0.2rem]">The list stays in the app</li>
-        </ul>
-      </div>
-    </section>
+        <section class="mt-6" aria-labelledby="features-title">
+          <h2 id="features-title" class="title is-5">Features</h2>
+          <div class="content">
+            <ul>
+              <li>Add a task</li>
+              <li>Mark it done</li>
+              <li>Delete it</li>
+              <li>The list stays in the app</li>
+            </ul>
+          </div>
+        </section>
 
+        <section class="mt-6" aria-labelledby="testimonials-title">
+          <h2 id="testimonials-title" class="title is-5">Testimonials</h2>
+          <div class="columns">
+            <div class="column is-flex">
+              <article class="card is-flex is-flex-direction-column is-flex-grow-1">
+                <div class="card-content is-flex is-flex-direction-column is-flex-grow-1">
+                  <p>“I finally finish the small things.”</p>
+                  <p class="has-text-grey mt-auto mb-0">Maya</p>
+                </div>
+              </article>
+            </div>
+            <div class="column is-flex">
+              <article class="card is-flex is-flex-direction-column is-flex-grow-1">
+                <div class="card-content is-flex is-flex-direction-column is-flex-grow-1">
+                  <p>“Checking one off is the whole point.”</p>
+                  <p class="has-text-grey mt-auto mb-0">Jonas</p>
+                </div>
+              </article>
+            </div>
+            <div class="column is-flex">
+              <article class="card is-flex is-flex-direction-column is-flex-grow-1">
+                <div class="card-content is-flex is-flex-direction-column is-flex-grow-1">
+                  <p>“It stays there when I come back.”</p>
+                  <p class="has-text-grey mt-auto mb-0">Ade</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
 
-    <section class="mt-10" aria-labelledby="testimonials-title">
-      <div class="mx-auto w-full max-w-5xl px-6">
-        <h2 id="testimonials-title" class="mb-3 text-xs font-bold tracking-[0.14em] text-muted uppercase">Testimonials</h2>
-        <ul class="m-0 grid list-none gap-4 p-0 md:grid-cols-3">
-          <li class="flex rounded-[14px] border border-line bg-card px-5 py-4">
-            <blockquote class="m-0 flex flex-1 flex-col">
-              <p class="m-0">“I finally finish the small things.”</p>
-              <p class="mt-auto mb-0 pt-4 text-sm text-muted">Maya</p>
-            </blockquote>
-          </li>
-          <li class="flex rounded-[14px] border border-line bg-card px-5 py-4">
-            <blockquote class="m-0 flex flex-1 flex-col">
-              <p class="m-0">“Checking one off is the whole point.”</p>
-              <p class="mt-auto mb-0 pt-4 text-sm text-muted">Jonas</p>
-            </blockquote>
-          </li>
-          <li class="flex rounded-[14px] border border-line bg-card px-5 py-4">
-            <blockquote class="m-0 flex flex-1 flex-col">
-              <p class="m-0">“It stays there when I come back.”</p>
-              <p class="mt-auto mb-0 pt-4 text-sm text-muted">Ade</p>
-            </blockquote>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="mt-10" aria-labelledby="how-title">
-      <div class="mx-auto w-full max-w-5xl px-6">
-        <h2 id="how-title" class="mb-3 text-xs font-bold tracking-[0.14em] text-muted uppercase">How it works</h2>
-        <ol class="m-0 list-decimal pl-[1.2rem]">
-          <li class="py-[0.2rem]">Add a task.</li>
-          <li class="py-[0.2rem]">Check it off or delete it.</li>
-          <li class="py-[0.2rem]">The list stays in the app.</li>
-        </ol>
+        <section class="mt-6" aria-labelledby="how-title">
+          <h2 id="how-title" class="title is-5">How it works</h2>
+          <div class="content">
+            <ol>
+              <li>Add a task.</li>
+              <li>Check it off or delete it.</li>
+              <li>The list stays in the app.</li>
+            </ol>
+          </div>
+        </section>
       </div>
     </section>
   </main>
 
-  <footer class="mt-12 bg-header px-4 py-11 text-center text-paper">
-    <a class="open-app inline-block rounded-full border border-blue-600 bg-blue-600 px-[0.85rem] py-[0.4rem] whitespace-nowrap text-white no-underline hover:border-blue-700 hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-blue-600" href="#preview">Open the app</a>
+  <footer class="site-footer has-text-centered">
+    <a class="button is-link open-app" href="#preview">Open the app</a>
   </footer>
 
   <script src="home.js"></script>
